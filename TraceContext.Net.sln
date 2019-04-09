@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceContext.Net", "TraceContext.Net\TraceContext.Net.csproj", "{BF758B8F-15A7-4AD5-B6D7-26935094B9F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceContext.Net.Tests", "TraceContext.Net.Tests\TraceContext.Net.Tests.csproj", "{1D85E05F-6215-49B5-A21D-3D51E7AE6214}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BF758B8F-15A7-4AD5-B6D7-26935094B9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF758B8F-15A7-4AD5-B6D7-26935094B9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF758B8F-15A7-4AD5-B6D7-26935094B9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D85E05F-6215-49B5-A21D-3D51E7AE6214}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D85E05F-6215-49B5-A21D-3D51E7AE6214}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D85E05F-6215-49B5-A21D-3D51E7AE6214}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D85E05F-6215-49B5-A21D-3D51E7AE6214}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
