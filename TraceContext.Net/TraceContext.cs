@@ -13,6 +13,9 @@ namespace TraceContext.Net
         public TraceFlag TraceFlags { get; private set; }
         public IReadOnlyDictionary<string, string> TraceState => _traceState;
 
+        private SortedDictionary<string, string> _traceState { get; set; }
+            = new SortedDictionary<string, string>();
+
         public (string traceparent, string tracestate) GetOutgoingHeaderValues()
         {
             return (
@@ -20,6 +23,9 @@ namespace TraceContext.Net
                 $"{string.Join(",", _traceState.Select(x => $"{x.Key}={x.Value}"))}");
         }
         
+        /// <summary>
+        /// Create a new instance that has SpanId and TraceId initialized to random values
+        /// </summary>
         public TraceContext()
         {
             SpanId = GetRandomHexString(8);
@@ -27,12 +33,15 @@ namespace TraceContext.Net
             ParentSpanId = null;
             TraceFlags = 0;
         }
-
-        private SortedDictionary<string, string> _traceState { get; set; }
-            = new SortedDictionary<string, string>();
-        private readonly string _componentName;
-
-
+        
+        /// <summary>
+        /// Tries to parse incoming headers into a new valid instance. 
+        /// </summary>
+        /// <param name="traceparent">Incoming traceparent header</param>
+        /// <param name="tracestate">Incoming tracestate header</param>
+        /// <param name="componentName">Used to properly update traceState</param>
+        /// <param name="target"></param>
+        /// <returns></returns>
         public static bool TryParse(string traceparent, string tracestate, string componentName,
             out TraceContext target)
         {
