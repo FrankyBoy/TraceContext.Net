@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,10 +6,12 @@
     <Authors>Immanuel Hayden</Authors>
     <Product />
     <Description>Aiming to provide a simple .net implementation of the W3C TraceContext specification.</Description>
-    <Copyright></Copyright>
     <PackageProjectUrl>https://github.com/FrankyBoy/TraceContext.Net</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/FrankyBoy/TraceContext.Net/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/FrankyBoy/TraceContext.Net</RepositoryUrl>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
 </Project>
